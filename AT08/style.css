@@ -1,0 +1,16 @@
+p{
+    background-color:black;
+    color: aqua;
+    font-size: 12pt;
+    text-align: left;
+    border: 5px solid red;
+}
+
+button{
+    background-color: black;
+    color: white;
+    font-size: 12pt;
+    border: 3px solid green;
+    border-radius: 15px;
+    padding: 20px;
+}

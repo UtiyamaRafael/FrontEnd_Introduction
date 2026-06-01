@@ -1,0 +1,15 @@
+header{
+    background-color: lightpink;
+    text-align: center;
+}
+
+main{
+    background-color: lightblue;
+    font-family: Arial;
+}
+
+footer{
+    background-color: gray;
+    text-align: center;
+    font-size: 20px;
+}

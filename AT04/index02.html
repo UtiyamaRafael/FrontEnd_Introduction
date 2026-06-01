@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header bgcolor="blue">
+        <h1>CADASTRO DE USUARIO</h1>
+
+        <a href="#cadastro">Formulário</a>
+        <a href="#lista">Lista</a>
+        <a href="#contato">Contato</a>
+
+    </header>
+
+    <div id="cadastro">
+        <h3>Formulário de Cadastro</h3> 
+
+        <form>
+            Nome: <input type="text"> <br> <br>
+            Email: <input type="email"> <br> <br>
+            Senha: <input type="password"> <br> <br>
+            Sexo:   <input type="radio" name="sexo" value="masculino"> Masculino
+                    <input type="radio" name="sexo" value="feminino"> Feminino <br><br>
+            Interesses: <input type="checkbox" name="interesses" value="tecnologia"> Tecnologia
+                        <input type="checkbox" name="interesses" value="esportes"> Esportes
+                        <input type="checkbox" name="interesses" value="musica"> Música <br><br>
+            Data: <input type="date"> <br><br>
+            Cor: <input type="color"> <br><br>
+            <input type="submit" value="Enviar">
+
+        </form>
+            
+        </div>
+
+        <div id="lista">
+            <h3>Lista de Usuários</h3>
+            
+                <table border="1">
+                <tr>
+                    <th rowspan="2">NOME</th>
+                    <th colspan="2">CONTATO</th>
+                    <th rowspan="2">SEXO</th>
+                </tr>
+
+                <tr>
+                    <th>EMAIL</th>
+                    <th>TELEFONE</th>
+                </tr>
+
+                <tr>
+                    <td>Maria Souza</td>
+                    <td>maria@gmail.com</td>
+                    <td>(92) 99999-1111</td>
+                    <td>Feminino</td>
+                </tr>
+
+                <tr>
+                    <td>João Lima</td>
+                    <td colspan="2">joao@gmail.com</td>
+                    <td>Masculino</td>
+                </tr>
+
+                <tr>
+                    <td>Ana Costa</td>
+                    <td>ana@gmail.com</td>
+                    <td>(92) 98888-2222</td>
+                    <td>Feminino</td>
+                </tr>
+            </table>
+            <br><br>
+        </div>
+
+        <div id="contato">
+            
+            <a href="https://unifil.br/">
+                <p>Clique na imagem para visitar o site da Unifil</p>
+                <img src="https://cdls.org.br/wp-content/uploads/cdlce_base/2018/09/Unifil1.jpg" alt="UNIFIL" width="500" height="350">
+            </a> <br>
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d468986.25707430503!2d-51.731803834375!3d-23.317386599999992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94eb4357ac1614f9%3A0x154c33aac4b7f0cf!2sCentro%20Universit%C3%A1rio%20Filad%C3%A9lfia%20-%20UniFil!5e0!3m2!1spt-BR!2sbr!4v1778542366271!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                width="600"
+                height="450"
+                style="border:1;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </div>
+
+</body>
+</html>

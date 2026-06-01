@@ -1,0 +1,49 @@
+body{
+    background-color: #c7c7c7;
+}
+
+.menu-principal{
+    display: flex;
+    font-size: 15pt;
+    justify-content: center;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}
+
+menu{
+    display: flex;
+    gap: 100px;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    margin: auto;
+}
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15pt;
+}
+
+#botoes{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 150px;
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.buttonAction{
+    padding: 10px;
+    border-radius: 10px;
+}

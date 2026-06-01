@@ -1,0 +1,34 @@
+/* style.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    height: 100vh;          
+    margin: 0;
+}
+
+#card {
+    background-color: rgba(65, 65, 65, 0.404);
+    padding: 20px;           
+    border-radius: 8px;      
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80vh;
+    text-align: center;
+    font-size: 24px;
+}
+
+img{
+    border-radius: 20PX;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+button:hover {
+    background-color: rgb(125, 125, 125);
+    transition: 0.3s;
+    transform: scale(1.1);
+}
