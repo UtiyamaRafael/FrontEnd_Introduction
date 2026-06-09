@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/digitallytailored/classless@latest/classless.min.css">
+</head>
+<body>
+
+    <img src="https://picsum.photos/200/300" alt="">
+    
+    <button onclick="alterFoto()">Alter foto</button>
+
+    <script>
+        function alterFoto() {
+            document.querySelector("img").src = "https://fastly.picsum.photos/id/1025/200/300.jpg?hmac=IOMIDjfOXbZ-vD59diaXLcQcq5g6Xo3Zg_gRF9UmwL0";
+        }
+    </script>
+
+</body>
+</html>
