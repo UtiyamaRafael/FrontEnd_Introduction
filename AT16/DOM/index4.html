@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="escoder">Este é um parágrafo.</p>
+
+    <button onclick="esconderParagrafo()">Esconder Parágrafo</button>
+
+    <button onclick="mostrarParagrafo()">Mostrar Parágrafo</button>
+
+    <script>
+        function esconderParagrafo() {
+            document.getElementById("escoder").style.display = "none";
+        }
+
+        function mostrarParagrafo() {
+            document.getElementById("escoder").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
