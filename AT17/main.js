@@ -2,6 +2,7 @@
 const botaoAdicionar = document.getElementById('botaoAdicionar');
 const inputTarefa = document.getElementById('novaTarefa');
 const selectPrioridade = document.getElementById('opcoes');
+const selectOrdenacao = document.getElementById('ordenarPor');
 const listaTarefas = document.getElementById('listaTarefas');
 
 // Array para armazenar as tarefas
@@ -43,8 +44,16 @@ function removerTarefa(id) {
 // Função para renderizar as tarefas
 function renderizarTarefas() {
     listaTarefas.innerHTML = '';
-    
-    tarefas.forEach(tarefa => {
+    const tarefasExibidas = [...tarefas];
+    const ordenacao = selectOrdenacao.value;
+
+    if (ordenacao === 'maior') {
+        tarefasExibidas.sort((a, b) => b.prioridade - a.prioridade);
+    } else if (ordenacao === 'menor') {
+        tarefasExibidas.sort((a, b) => a.prioridade - b.prioridade);
+    }
+
+    tarefasExibidas.forEach(tarefa => {
         const div = document.createElement('div');
         div.className = `tarefa ${obterClassePrioridade(tarefa.prioridade)}`;
         
@@ -85,6 +94,10 @@ inputTarefa.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         adicionarTarefa();
     }
+});
+
+selectOrdenacao.addEventListener('change', function() {
+    renderizarTarefas();
 });
 
 // Renderizar inicial
