@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body>
+
+    <header id="cabecalho">
+        <h1>Gerenciador de Tarefas Inteligente</h1>
+    </header>
+
+    <div id="adicionarTarefa">
+        <input type="text" id="novaTarefa" placeholder="Digite a nova tarefa">
+        <select id="opcoes">
+            <option value="1">Baixo</option>
+            <option value="2">Médio</option>
+            <option value="3">Alto</option>
+        </select>
+        <select id="ordenarPor" aria-label="Ordenar tarefas por prioridade">
+            <option value="padrao">Ordenação padrão</option>
+            <option value="maior">Maior prioridade primeiro</option>
+            <option value="menor">Menor prioridade primeiro</option>
+        </select>
+        <button id="botaoAdicionar">Adicionar Tarefa</button>
+    </div>
+
+    <div id="listaTarefas">
+
+    </div>
+
+</body>
+</html>
