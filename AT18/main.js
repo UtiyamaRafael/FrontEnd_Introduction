@@ -1,15 +1,12 @@
 const botaoAdicionar = document.getElementById('botaoAdicionar');
 const inputTarefa = document.getElementById('novaTarefa');
-const selectPrioridade = document.getElementById('opcoes');
-const selectOrdenacao = document.getElementById('ordenarPor');
 const listaTarefas = document.getElementById('listaTarefas');
+const itensTarefas = document.getElementById('itensTarefas');
 
 let tarefas = [];
-let proximoId = 1;
 
 function adicionarTarefa() {
     const texto = inputTarefa.value.trim();
-    const prioridade = selectPrioridade.value;
     
     if (texto === '') {
         alert('Digite uma tarefa!');
@@ -17,9 +14,8 @@ function adicionarTarefa() {
     }
     
     const tarefa = {
-        id: proximoId++,
-        texto: texto,
-        prioridade: prioridade
+        id: Date.now(),
+        texto: texto
     };
     
     tarefas.push(tarefa);
@@ -30,65 +26,21 @@ function adicionarTarefa() {
     renderizarTarefas();
 }
 
-function removerTarefa(id) {
-    tarefas = tarefas.filter(tarefa => tarefa.id !== id);
-    renderizarTarefas();
-}
 
 function renderizarTarefas() {
-    listaTarefas.innerHTML = '';
+    itensTarefas.innerHTML = '';
     const tarefasExibidas = [...tarefas];
-    const ordenacao = selectOrdenacao.value;
-
-    if (ordenacao === 'maior') {
-        tarefasExibidas.sort((a, b) => b.prioridade - a.prioridade);
-    } else if (ordenacao === 'menor') {
-        tarefasExibidas.sort((a, b) => a.prioridade - b.prioridade);
-    }
 
     tarefasExibidas.forEach(tarefa => {
-        const div = document.createElement('div');
-        div.className = `tarefa ${obterClassePrioridade(tarefa.prioridade)}`;
+        const li = document.createElement('li');
+        li.className = 'tarefa';
         
-        const nomesPrioridade = {
-            '1': 'Baixo',
-            '2': 'Médio',
-            '3': 'Alto'
-        };
-        
-        div.innerHTML = `
-            <div class="tarefa-info">
-                <div class="tarefa-titulo">${tarefa.texto}</div>
-                <span class="tarefa-prioridade ${obterClassePrioridade(tarefa.prioridade)}">
-                    ${nomesPrioridade[tarefa.prioridade]}
-                </span>
-            </div>
-            <button class="botao-remover" onclick="removerTarefa(${tarefa.id})">Remover</button>
+        li.innerHTML = `
+            <span class="tarefa-texto">${tarefa.texto}</span>
         `;
         
-        listaTarefas.appendChild(div);
+        itensTarefas.appendChild(li);
     });
 }
 
-function obterClassePrioridade(prioridade) {
-    const mapa = {
-        '1': 'baixo',
-        '2': 'medio',
-        '3': 'alto'
-    };
-    return mapa[prioridade];
-}
-
 botaoAdicionar.addEventListener('click', adicionarTarefa);
-
-inputTarefa.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') {
-        adicionarTarefa();
-    }
-});
-
-selectOrdenacao.addEventListener('change', function() {
-    renderizarTarefas();
-});
-
-renderizarTarefas();

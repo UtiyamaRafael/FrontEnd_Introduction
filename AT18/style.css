@@ -121,28 +121,6 @@ body {
     word-break: break-word;
 }
 
-.tarefa-prioridade {
-    display: inline-block;
-    padding: 4px 9px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-.tarefa-prioridade.baixo {
-    color: #244f7c;
-    background-color: #e7f0fa;
-}
-
-.tarefa-prioridade.medio {
-    color: #805712;
-    background-color: #fff2d9;
-}
-
-.tarefa-prioridade.alto {
-    color: #8f2929;
-    background-color: #f9e1e1;
-}
 
 .botao-remover {
     padding: 9px 13px;
