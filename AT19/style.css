@@ -72,3 +72,31 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+#listaResultados {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#listaResultados li {
+    display: flex;
+    justify-content: space-between; /* Joga o nome para a esquerda e o valor para a direita */
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+
+.destaque-final {
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ec0808;
+    color: #fff;
+    border-radius: 8px;
+    border: 2px solid #000000;
+    margin-top: 16px;
+}
